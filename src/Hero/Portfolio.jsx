@@ -47,7 +47,7 @@ const Portfolio = () => {
     // Mobile vertical carousel
     const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel(
         { loop: true, align: "start", dragFree: false, axis: "y" },
-        [Autoplay({ delay: 20000 })]
+
     );
 
     // Desktop horizontal carousel
