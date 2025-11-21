@@ -46,7 +46,7 @@ const portfolios = [
 const Portfolio = () => {
     // Mobile vertical carousel
     const [emblaRefMobile, emblaApiMobile] = useEmblaCarousel(
-        { loop: false, align: "start", dragFree: false, axis: "y" },
+        { loop: true, align: "start", dragFree: false, axis: "y" },
 
     );
 
