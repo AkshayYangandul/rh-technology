@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+}
+
+.hero-gradient {
+    background: radial-gradient(circle at 20% 20%, #ffffff 0%, #f5f7ff 55%, #eef1ff 100%);
+}
+
+.hero-spotlight {
+    filter: drop-shadow(0 20px 60px rgba(10, 8, 45, 0.15));
+}
+
+.hero-slide-in {
+    animation: heroSlideIn 0.85s ease forwards;
+}
+
+.hero-float {
+    animation: heroFloat 8s ease-in-out infinite;
+}
+
+.hero-float-delay {
+    animation: heroFloat 9.5s ease-in-out 1.5s infinite;
+}
+
+.hero-orbit {
+    animation: heroOrbit 14s ease-in-out infinite;
+}
+
+.hero-orbit-delay {
+    animation: heroOrbit 16s ease-in-out 1s infinite;
+}
+
+.hero-service-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 40px rgba(15, 11, 43, 0.08);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f0f1b;
+    backdrop-filter: blur(6px);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.hero-service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(15, 11, 43, 0.15);
+}
+
+.hero-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eef0ff;
+    color: #5b86e5;
+    font-size: 1.2rem;
+}
+
+.hero-progress-dot {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: inherit;
+    transition: color 200ms ease, border-color 200ms ease;
+}
+
+.hero-progress-dot span {
+    font-size: 0.85rem;
+}
+
+.hero-progress-dot--active {
+    color: #0f0f1b;
+    border-color: rgba(91, 134, 229, 0.4);
+}
+
+.hero-arrow {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    transition: transform 200ms ease, background-color 200ms ease, color 200ms ease;
+}
+
+.hero-arrow--ghost {
+    border: 1px solid #d5d7e9;
+    color: #0f0f1b;
+    background: #fff;
+}
+
+.hero-arrow--ghost:hover {
+    transform: translateX(-2px);
+    border-color: transparent;
+    background: #e4e7ff;
+}
+
+.hero-arrow--solid {
+    background: linear-gradient(135deg, #5b86e5, #36d1dc);
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 25px rgba(91, 134, 229, 0.35);
+}
+
+.hero-arrow--solid:hover {
+    transform: translateX(2px);
+}
+
+.hero-arrow-dot {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    opacity: 0.7;
+}
+
+@keyframes heroSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-12px) translateX(8px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes heroOrbit {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(4deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
